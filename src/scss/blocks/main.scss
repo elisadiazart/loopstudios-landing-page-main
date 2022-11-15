@@ -1,0 +1,60 @@
+.main{
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 8rem;
+
+    &__leader{
+        margin-bottom: 5rem;
+    }
+
+    &__creations{
+        margin-bottom: 3rem;
+    }
+}
+
+
+.leader{
+    &__image{
+        margin-bottom: 3rem;
+    }
+
+    &__text{
+        font-family: 'Alata', sans-serif;
+        color: hsl(0, 0%, 55%);
+        font-weight: 400;
+        text-align: center;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+        line-height: 2rem;
+        font-size: 15px;
+    }
+}
+
+.creations{
+    &__container{
+        display: grid;
+        gap: 2rem;
+        justify-content: center;
+        margin: auto;
+    }
+
+    &__image{
+        position: relative;
+    }
+
+    &__image-text{
+        width: 190px;
+        color: white;
+        position: absolute;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        top: 40%;
+        left: 2rem;
+    }
+}

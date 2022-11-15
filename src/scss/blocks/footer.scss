@@ -1,0 +1,52 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    justify-content: center;
+
+    &__nav{
+        justify-content: center;
+    }
+
+    &__menu{
+        padding-top: 2.2rem;
+        padding-bottom: 2.2rem;
+    }
+
+    &__logo{
+        width: 35%;
+        padding-top: 4rem;
+        margin: auto;
+    }
+
+    &__item{
+        padding: 1rem;
+        margin: auto;
+        text-align: center;
+    }
+
+    &__link{
+        margin: auto;
+        font-family: 'Alata', sans-serif;
+        color: white;
+        
+    }
+
+    &__social-media{
+        margin: auto;
+        padding-bottom: 1rem;
+    }
+
+    &__copyright{
+        text-align: center;
+        font-family: 'Alata', sans-serif;
+        color: hsl(0, 0%, 55%);
+        padding-bottom: 3rem;
+    }
+}
+
+.fa-brands{
+    padding: .5rem;
+    color: white;
+    font-size: 2rem;
+}

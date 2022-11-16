@@ -368,14 +368,30 @@ a {
   font-weight: 300;
   margin-bottom: 2rem;
 }
+@media screen and (min-width: 1024px) {
+  .title--big {
+    text-align: left;
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 1.9rem;
+  }
+}
 
 .header {
-  background-image: url(../../../dist/assets/images/mobile/image-hero.jpg);
+  background-image: url(../assets/images/mobile/image-hero.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   height: 900px;
   position: relative;
   overflow: hidden;
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    background-image: url(../assets/images/desktop/image-hero.jpg);
+    height: 500px;
+    background-size: cover;
+    margin-bottom: 6rem;
+  }
 }
 .header__slogan {
   width: 400px;
@@ -391,6 +407,14 @@ a {
   border: 2px solid white;
   margin-top: 200px;
 }
+@media screen and (min-width: 1024px) {
+  .header__slogan {
+    margin: 0;
+    width: 450px;
+    margin-left: 3rem;
+    margin-top: 2rem;
+  }
+}
 
 .nav {
   display: flex;
@@ -402,6 +426,11 @@ a {
 }
 .nav__hamburguer {
   width: 35px;
+}
+@media screen and (min-width: 1024px) {
+  .nav__hamburguer {
+    display: none;
+  }
 }
 
 .menu {
@@ -418,27 +447,66 @@ a {
   transform: translateX(100vw);
   transition: transform 1s;
 }
+@media screen and (min-width: 1024px) {
+  .menu {
+    transform: translate(0);
+    background-color: transparent;
+    position: static;
+    height: auto;
+    padding: 0;
+    width: auto;
+  }
+}
 .menu__nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 1rem;
 }
+@media screen and (min-width: 1024px) {
+  .menu__nav {
+    padding: 0;
+  }
+}
 .menu__logo {
   padding-left: 3rem;
+}
+@media screen and (min-width: 1024px) {
+  .menu__logo {
+    display: none;
+  }
 }
 .menu__close {
   padding-right: 3rem;
 }
+@media screen and (min-width: 1024px) {
+  .menu__close {
+    display: none;
+  }
+}
 .menu__container {
   padding-top: 200px;
   padding-bottom: 200px;
+}
+@media screen and (min-width: 1024px) {
+  .menu__container {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
 }
 .menu__item {
   text-transform: uppercase;
   padding: 1rem;
   padding-left: 3rem;
   font-size: 1.7rem;
+}
+@media screen and (min-width: 1024px) {
+  .menu__item {
+    font-size: 1rem;
+    text-transform: none;
+    padding-left: 2rem;
+  }
 }
 
 .menu--show {
@@ -469,12 +537,26 @@ a {
 .main__leader {
   margin-bottom: 5rem;
 }
+@media screen and (min-width: 1024px) {
+  .main__leader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+}
 .main__creations {
   margin-bottom: 3rem;
 }
 
 .leader__image {
   margin-bottom: 3rem;
+}
+@media screen and (min-width: 1024px) {
+  .leader__image {
+    margin-left: 70px;
+    width: 550px;
+  }
 }
 .leader__text {
   font-family: "Alata", sans-serif;
@@ -486,6 +568,24 @@ a {
   line-height: 2rem;
   font-size: 15px;
 }
+@media screen and (min-width: 1024px) {
+  .leader__text {
+    text-align: left;
+    margin: 0;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .leader__text-container {
+    width: 50%;
+    background-color: white;
+    position: absolute;
+    bottom: 2.5rem;
+    right: 0;
+    padding-left: 4rem;
+    padding-top: 4rem;
+  }
+}
 
 .creations__container {
   display: grid;
@@ -493,8 +593,22 @@ a {
   justify-content: center;
   margin: auto;
 }
+@media screen and (min-width: 1024px) {
+  .creations__container {
+    width: 90%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    margin: auto;
+  }
+}
 .creations__image {
   position: relative;
+}
+@media screen and (min-width: 1024px) {
+  .creations__image {
+    margin: auto;
+  }
 }
 .creations__image-text {
   width: 190px;
@@ -507,6 +621,19 @@ a {
   top: 40%;
   left: 2rem;
 }
+@media screen and (min-width: 1024px) {
+  .creations__image-text {
+    width: 67%;
+    bottom: 1rem;
+    top: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .creations__title {
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+  }
+}
 
 .footer {
   display: flex;
@@ -514,22 +641,61 @@ a {
   background-color: black;
   justify-content: center;
 }
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding-top: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+  }
+}
 .footer__nav {
   justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  .footer__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .footer__menu {
   padding-top: 2.2rem;
   padding-bottom: 2.2rem;
+}
+@media screen and (min-width: 1024px) {
+  .footer__menu {
+    display: flex;
+    width: 40%;
+    margin-left: 150px;
+    padding-top: 0;
+  }
 }
 .footer__logo {
   width: 35%;
   padding-top: 4rem;
   margin: auto;
 }
+@media screen and (min-width: 1024px) {
+  .footer__logo {
+    margin: 0;
+    margin-left: 150px;
+    width: 200px;
+    padding: 0;
+    padding-bottom: 2rem;
+  }
+}
 .footer__item {
   padding: 1rem;
   margin: auto;
   text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .footer__item {
+    margin: 0;
+    padding: 0;
+    padding-right: 2rem;
+  }
 }
 .footer__link {
   margin: auto;
@@ -540,17 +706,36 @@ a {
   margin: auto;
   padding-bottom: 1rem;
 }
+@media screen and (min-width: 1024px) {
+  .footer__social-media {
+    padding-bottom: 1.7rem;
+    padding-left: 8rem;
+  }
+}
 .footer__copyright {
   text-align: center;
   font-family: "Alata", sans-serif;
   color: hsl(0deg, 0%, 55%);
   padding-bottom: 3rem;
 }
+@media screen and (min-width: 1024px) {
+  .footer__copyright {
+    text-align: right;
+  }
+}
+.footer__container {
+  margin-right: 150px;
+}
 
 .fa-brands {
   padding: 0.5rem;
   color: white;
   font-size: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .fa-brands {
+    font-size: 1.7rem;
+  }
 }
 
 .button {
@@ -564,4 +749,15 @@ a {
   padding-right: 4rem;
   border: 2px solid black;
   margin: auto;
+}
+@media screen and (min-width: 1024px) {
+  .button {
+    position: absolute;
+    top: 1090px;
+    right: 7%;
+    font-size: 0.9rem;
+    padding: 0.8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }

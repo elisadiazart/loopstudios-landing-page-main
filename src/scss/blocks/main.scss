@@ -1,3 +1,5 @@
+@use '../mixins/responsive.scss' as *;
+
 .main{
     margin-top: 2rem;
     margin-left: 2rem;
@@ -9,10 +11,18 @@
 
     &__leader{
         margin-bottom: 5rem;
+        @include responsive(laptop){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+        
     }
 
     &__creations{
         margin-bottom: 3rem;
+        
     }
 }
 
@@ -20,6 +30,10 @@
 .leader{
     &__image{
         margin-bottom: 3rem;
+        @include responsive(laptop){
+            margin-left: 70px;
+            width: 550px;
+        }
     }
 
     &__text{
@@ -31,8 +45,26 @@
         margin-right: 2.5rem;
         line-height: 2rem;
         font-size: 15px;
+        @include responsive(laptop){
+           text-align: left;
+           margin: 0;
+           font-size: 14px;
+        }
+    }
+
+    &__text-container{
+        @include responsive(laptop){
+            width: 50%;
+            background-color: white;
+            position: absolute;
+            bottom: 2.5rem;
+            right: 0;
+            padding-left: 4rem;
+            padding-top: 4rem;
+        }
     }
 }
+
 
 .creations{
     &__container{
@@ -40,10 +72,21 @@
         gap: 2rem;
         justify-content: center;
         margin: auto;
+        @include responsive(laptop){
+            width: 90%;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1rem;
+            margin: auto
+            
+         }
     }
 
     &__image{
         position: relative;
+        @include responsive(laptop){
+            margin: auto;
+         }
     }
 
     &__image-text{
@@ -56,5 +99,18 @@
         font-weight: 400;
         top: 40%;
         left: 2rem;
+        @include responsive(laptop){
+            width: 67%;
+            bottom: 1rem;
+            top: auto;
+            
+         }
+    }
+
+    &__title{
+        @include responsive(laptop){
+            margin-left: 3rem;
+            margin-bottom: 3rem;
+         }
     }
 }

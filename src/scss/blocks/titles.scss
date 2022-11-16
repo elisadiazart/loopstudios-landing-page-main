@@ -1,3 +1,5 @@
+@use '../mixins/responsive.scss' as *;
+
 .title--big{
     font-family: 'Josefin Sans', sans-serif;
     text-transform: uppercase;
@@ -5,4 +7,10 @@
     font-size: 2rem;
     font-weight: 300;
     margin-bottom: 2rem;
+    @include responsive(laptop){
+        text-align: left;
+        margin: 0;
+        margin-bottom: 1rem;
+        font-size: 1.9rem;
+    }
 }

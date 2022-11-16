@@ -1,3 +1,6 @@
+@use '../mixins/responsive.scss' as *;
+
+
 .button{
     display: inline;
     font-family: 'Alata', sans-serif;
@@ -9,4 +12,15 @@
     padding-right: 4rem;
     border: 2px solid black;
     margin: auto;
+
+    @include responsive(laptop){
+        position: absolute;
+        top: 1090px;
+        right: 7%;
+        font-size: .9rem;
+        padding: .8rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+       
+     }
 }

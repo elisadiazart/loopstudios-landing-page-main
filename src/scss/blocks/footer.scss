@@ -1,28 +1,60 @@
+@use '../mixins/responsive.scss' as *;
+
 .footer{
     display: flex;
     flex-direction: column;
     background-color: black;
     justify-content: center;
+    @include responsive(laptop){
+        padding-top: 2rem ;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+    }
 
     &__nav{
         justify-content: center;
+        @include responsive(laptop){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 
     &__menu{
         padding-top: 2.2rem;
         padding-bottom: 2.2rem;
+        @include responsive(laptop){
+            display: flex;
+            width: 40%;
+            margin-left: 150px;
+            padding-top: 0;
+        }
     }
 
     &__logo{
         width: 35%;
         padding-top: 4rem;
         margin: auto;
+        @include responsive(laptop){
+            margin: 0;
+            margin-left: 150px;
+            width: 200px;
+            padding: 0;
+            padding-bottom: 2rem;
+        }
     }
 
     &__item{
         padding: 1rem;
         margin: auto;
         text-align: center;
+        @include responsive(laptop){
+            margin: 0;
+            padding: 0;
+            padding-right: 2rem;
+        }
+
     }
 
     &__link{
@@ -35,6 +67,10 @@
     &__social-media{
         margin: auto;
         padding-bottom: 1rem;
+        @include responsive(laptop){
+            padding-bottom: 1.7rem;
+            padding-left: 8rem;
+        }
     }
 
     &__copyright{
@@ -42,6 +78,13 @@
         font-family: 'Alata', sans-serif;
         color: hsl(0, 0%, 55%);
         padding-bottom: 3rem;
+        @include responsive(laptop){
+            text-align: right;
+        }
+    }
+
+    &__container{
+        margin-right: 150px;
     }
 }
 
@@ -49,4 +92,7 @@
     padding: .5rem;
     color: white;
     font-size: 2rem;
+    @include responsive(laptop){
+        font-size: 1.7rem;
+    }
 }

@@ -1,30 +1,33 @@
 @use '../mixins/responsive.scss' as *;
 
-.footer{
+.footer {
     display: flex;
     flex-direction: column;
     background-color: black;
     justify-content: center;
-    @include responsive(laptop){
-        padding-top: 2rem ;
+
+    @include responsive(laptop) {
+        padding-top: 2rem;
         flex-direction: row;
         justify-content: space-between;
         padding-bottom: 2rem;
     }
 
-    &__nav{
+    &__nav {
         justify-content: center;
-        @include responsive(laptop){
+
+        @include responsive(laptop) {
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
     }
 
-    &__menu{
+    &__menu {
         padding-top: 2.2rem;
         padding-bottom: 2.2rem;
-        @include responsive(laptop){
+
+        @include responsive(laptop) {
             display: flex;
             width: 40%;
             margin-left: 150px;
@@ -32,11 +35,12 @@
         }
     }
 
-    &__logo{
+    &__logo {
         width: 35%;
         padding-top: 4rem;
         margin: auto;
-        @include responsive(laptop){
+
+        @include responsive(laptop) {
             margin: 0;
             margin-left: 150px;
             width: 200px;
@@ -45,11 +49,12 @@
         }
     }
 
-    &__item{
+    &__item {
         padding: 1rem;
         margin: auto;
         text-align: center;
-        @include responsive(laptop){
+
+        @include responsive(laptop) {
             margin: 0;
             padding: 0;
             padding-right: 2rem;
@@ -57,42 +62,103 @@
 
     }
 
-    &__link{
+    &__link {
         margin: auto;
         font-family: 'Alata', sans-serif;
         color: white;
-        
+
+        &::after {
+            content: '';
+            display: block;
+            width: 90%;
+            height: 2px;
+            background-color: white;
+            margin: auto;
+            transform: scale(0);
+            transition: transform;
+            transition-duration: .2s;
+        }
+
+        &:hover {
+            &::after {
+                content: '';
+                display: block;
+                width: 80%;
+                height: 2px;
+                background-color: white;
+                margin: auto;
+                transform: scale(100%);
+                transition: transform;
+                transition-duration: .2s;
+            }
+        }
+
     }
 
-    &__social-media{
-        margin: auto;
+    &__social-media {
+        display: flex;
+        justify-content: center;
         padding-bottom: 1rem;
-        @include responsive(laptop){
+
+        @include responsive(laptop) {
             padding-bottom: 1.7rem;
             padding-left: 8rem;
         }
     }
 
-    &__copyright{
+    &__copyright {
         text-align: center;
         font-family: 'Alata', sans-serif;
         color: hsl(0, 0%, 55%);
         padding-bottom: 3rem;
-        @include responsive(laptop){
+
+        @include responsive(laptop) {
             text-align: right;
         }
     }
 
-    &__container{
-        margin-right: 150px;
+    &__container {
+        margin: auto;
     }
 }
 
-.fa-brands{
+.fa-brands {
     padding: .5rem;
     color: white;
     font-size: 2rem;
-    @include responsive(laptop){
+
+
+    @include responsive(laptop) {
         font-size: 1.7rem;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: .2rem;
+            display: block;
+            width: 80%;
+            height: 2px;
+            background-color: white;
+            margin: auto;
+            transform: scale(0);
+            transition: transform;
+            transition-duration: .2s;
+        }
+    }
+
+    &:hover {
+        &::after {
+            content: '';
+            display: block;
+            width: 80%;
+            height: 2px;
+            background-color: white;
+            margin: auto;
+            transform: scale(100%);
+            transition: transform;
+            transition-duration: .2s;
+        }
     }
 }

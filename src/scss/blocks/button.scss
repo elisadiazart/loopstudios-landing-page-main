@@ -1,7 +1,7 @@
 @use '../mixins/responsive.scss' as *;
 
 
-.button{
+.button {
     display: inline;
     font-family: 'Alata', sans-serif;
     text-transform: uppercase;
@@ -12,15 +12,28 @@
     padding-right: 4rem;
     border: 2px solid black;
     margin: auto;
+    position: absolute;
+    bottom: -9.2rem;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    text-align: center;
 
-    @include responsive(laptop){
+    @include responsive(laptop) {
+        margin: 0;
         position: absolute;
-        top: 1090px;
-        right: 7%;
+        top: 15px;
+        left: auto;
+        right: -60px;
         font-size: .9rem;
         padding: .8rem;
         padding-left: 3rem;
         padding-right: 3rem;
-       
-     }
+        width: 200px;
+        height: 50px;
+
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+    }
 }

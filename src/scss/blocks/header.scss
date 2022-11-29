@@ -1,26 +1,27 @@
 @use '../mixins/responsive.scss' as *;
 
-.header{
+.header {
     background-image: url(../assets/images/mobile/image-hero.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
-    height: 900px;
+    background-size: 125%;
+    height: 100vh;
     position: relative;
     overflow: hidden;
-    @include responsive(laptop){
+
+    @include responsive(laptop) {
         background-image: url(../assets/images/desktop/image-hero.jpg);
-        height: 500px;
+        height: 700px;
         background-size: cover;
         margin-bottom: 6rem;
     }
 
 
-    &__slogan{
-        width: 400px;
+    &__slogan {
+        width: 350px;
         color: white;
         font-family: 'Josefin Sans', sans-serif;
         text-transform: uppercase;
-        font-size: 3rem;
+        font-size: 2.5rem;
         justify-content: center;
         margin: auto;
         padding: 2rem;
@@ -29,16 +30,16 @@
         border: 2px solid white;
         margin-top: 200px;
 
-        @include responsive(laptop){
+        @include responsive(laptop) {
             margin: 0;
             width: 450px;
-            margin-left: 3rem;
-            margin-top: 2rem;
+            margin-left: 15%;
+            margin-top: 9rem
         }
     }
 }
 
-.nav{
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,16 +47,17 @@
     margin-right: 3rem;
     padding-top: 2rem;
 
-    &__hamburguer{
+    &__hamburguer {
         width: 35px;
-        @include responsive(laptop){
+
+        @include responsive(laptop) {
             display: none;
         }
     }
 }
 
 
-.menu{
+.menu {
     position: absolute;
     width: 100%;
     color: white;
@@ -68,69 +70,104 @@
     height: 100vh;
     transform: translateX(100vw);
     transition: transform 1s;
-    @include responsive(laptop){
+
+    @include responsive(laptop) {
         transform: translate(0);
         background-color: transparent;
         position: static;
         height: auto;
         padding: 0;
         width: auto;
-        
-    }
-    
 
-    &__nav{
+    }
+
+
+    &__nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding-top: 1rem;
 
-        @include responsive(laptop){
+        @include responsive(laptop) {
             padding: 0;
         }
     }
 
-    &__logo{
+    &__logo {
         padding-left: 3rem;
-        @include responsive(laptop){
+
+        @include responsive(laptop) {
             display: none;
         }
     }
 
-    &__close{
+    &__close {
         padding-right: 3rem;
-        @include responsive(laptop){
+
+        @include responsive(laptop) {
             display: none;
         }
-        
+
     }
 
-    &__container{
+    &__container {
         padding-top: 200px;
         padding-bottom: 200px;
-        @include responsive(laptop){
+
+        @include responsive(laptop) {
             display: flex;
             flex-direction: row;
             padding: 0;
         }
-        
+
     }
 
-    &__item{
+    &__item {
         text-transform: uppercase;
         padding: 1rem;
         padding-left: 3rem;
         font-size: 1.7rem;
-        @include responsive(laptop){
+
+        &::after {
+            content: '';
+            display: block;
+            width: 90%;
+            height: 2px;
+            background-color: white;
+            margin: auto;
+            transform: scale(0);
+            transition: transform;
+            transition-duration: .2s;
+        }
+
+
+
+        @include responsive(laptop) {
             font-size: 1rem;
             text-transform: none;
             padding-left: 2rem;
+
+
+        }
+
+        &:hover {
+            &::after {
+                content: '';
+                display: block;
+                width: 90%;
+                height: 2px;
+                background-color: white;
+                margin: auto;
+                transform: scale(100%);
+                transition: transform;
+                transition-duration: .2s;
+            }
         }
     }
-    
+
 }
 
-.menu--show{
+.menu--show {
     position: absolute;
     width: 100%;
     color: white;
@@ -144,5 +181,5 @@
     flex-direction: column;
     transform: translateX(0);
     transition: transform 1s;
-    
+
 }

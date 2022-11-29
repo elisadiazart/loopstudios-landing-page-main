@@ -380,25 +380,25 @@ a {
 .header {
   background-image: url(../assets/images/mobile/image-hero.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
-  height: 900px;
+  background-size: 125%;
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }
 @media screen and (min-width: 1024px) {
   .header {
     background-image: url(../assets/images/desktop/image-hero.jpg);
-    height: 500px;
+    height: 700px;
     background-size: cover;
     margin-bottom: 6rem;
   }
 }
 .header__slogan {
-  width: 400px;
+  width: 350px;
   color: white;
   font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2.5rem;
   justify-content: center;
   margin: auto;
   padding: 2rem;
@@ -411,8 +411,8 @@ a {
   .header__slogan {
     margin: 0;
     width: 450px;
-    margin-left: 3rem;
-    margin-top: 2rem;
+    margin-left: 15%;
+    margin-top: 9rem;
   }
 }
 
@@ -501,12 +501,34 @@ a {
   padding-left: 3rem;
   font-size: 1.7rem;
 }
+.menu__item::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 2px;
+  background-color: white;
+  margin: auto;
+  transform: scale(0);
+  transition: transform;
+  transition-duration: 0.2s;
+}
 @media screen and (min-width: 1024px) {
   .menu__item {
     font-size: 1rem;
     text-transform: none;
     padding-left: 2rem;
   }
+}
+.menu__item:hover::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 2px;
+  background-color: white;
+  margin: auto;
+  transform: scale(100%);
+  transition: transform;
+  transition-duration: 0.2s;
 }
 
 .menu--show {
@@ -534,27 +556,26 @@ a {
   justify-content: center;
   margin-bottom: 8rem;
 }
-.main__leader {
+
+.leader {
   margin-bottom: 5rem;
 }
 @media screen and (min-width: 1024px) {
-  .main__leader {
+  .leader {
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
+    margin: auto;
+    margin-bottom: 10rem;
   }
 }
-.main__creations {
-  margin-bottom: 3rem;
-}
-
 .leader__image {
   margin-bottom: 3rem;
 }
 @media screen and (min-width: 1024px) {
   .leader__image {
-    margin-left: 70px;
+    margin-left: -300px;
     width: 550px;
   }
 }
@@ -580,13 +601,25 @@ a {
     width: 50%;
     background-color: white;
     position: absolute;
-    bottom: 2.5rem;
-    right: 0;
-    padding-left: 4rem;
-    padding-top: 4rem;
+    bottom: -5rem;
+    right: -300px;
+    padding-left: 3rem;
+    padding-top: 3rem;
+    min-width: 500px;
   }
 }
 
+.creations {
+  margin-bottom: 3rem;
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  .creations {
+    width: 70%;
+    margin: auto;
+    object-fit: fill;
+  }
+}
 .creations__container {
   display: grid;
   gap: 2rem;
@@ -603,12 +636,34 @@ a {
   }
 }
 .creations__image {
+  background-color: rgb(175, 168, 168);
   position: relative;
 }
 @media screen and (min-width: 1024px) {
   .creations__image {
     margin: auto;
+    position: relative;
   }
+}
+.creations__image::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(233, 233, 233, 0.8);
+  opacity: 0;
+  transition: opacity;
+  transition-duration: 0.4s;
+}
+.creations__image:hover::after {
+  opacity: 1;
+  transition: opacity;
+  transition-duration: 0.4s;
+}
+.creations__image:hover .creations__image-text {
+  color: black;
 }
 .creations__image-text {
   width: 190px;
@@ -617,15 +672,18 @@ a {
   font-family: "Josefin Sans", sans-serif;
   font-size: 2rem;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 700;
   top: 40%;
   left: 2rem;
 }
 @media screen and (min-width: 1024px) {
   .creations__image-text {
-    width: 67%;
+    font-size: 1.6rem;
+    left: 10%;
+    width: 40%;
     bottom: 1rem;
     top: auto;
+    z-index: 10;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -702,8 +760,31 @@ a {
   font-family: "Alata", sans-serif;
   color: white;
 }
-.footer__social-media {
+.footer__link::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 2px;
+  background-color: white;
   margin: auto;
+  transform: scale(0);
+  transition: transform;
+  transition-duration: 0.2s;
+}
+.footer__link:hover::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 2px;
+  background-color: white;
+  margin: auto;
+  transform: scale(100%);
+  transition: transform;
+  transition-duration: 0.2s;
+}
+.footer__social-media {
+  display: flex;
+  justify-content: center;
   padding-bottom: 1rem;
 }
 @media screen and (min-width: 1024px) {
@@ -724,7 +805,7 @@ a {
   }
 }
 .footer__container {
-  margin-right: 150px;
+  margin: auto;
 }
 
 .fa-brands {
@@ -735,7 +816,33 @@ a {
 @media screen and (min-width: 1024px) {
   .fa-brands {
     font-size: 1.7rem;
+    position: relative;
   }
+  .fa-brands::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0.2rem;
+    display: block;
+    width: 80%;
+    height: 2px;
+    background-color: white;
+    margin: auto;
+    transform: scale(0);
+    transition: transform;
+    transition-duration: 0.2s;
+  }
+}
+.fa-brands:hover::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 2px;
+  background-color: white;
+  margin: auto;
+  transform: scale(100%);
+  transition: transform;
+  transition-duration: 0.2s;
 }
 
 .button {
@@ -749,15 +856,28 @@ a {
   padding-right: 4rem;
   border: 2px solid black;
   margin: auto;
+  position: absolute;
+  bottom: -9.2rem;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  text-align: center;
 }
 @media screen and (min-width: 1024px) {
   .button {
+    margin: 0;
     position: absolute;
-    top: 1090px;
-    right: 7%;
+    top: 15px;
+    left: auto;
+    right: -60px;
     font-size: 0.9rem;
     padding: 0.8rem;
     padding-left: 3rem;
     padding-right: 3rem;
+    width: 200px;
+    height: 50px;
+  }
+  .button:hover {
+    background-color: black;
+    color: white;
   }
 }

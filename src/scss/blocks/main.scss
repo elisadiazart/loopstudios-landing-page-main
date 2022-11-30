@@ -138,7 +138,7 @@
         font-size: 2rem;
         text-transform: uppercase;
         font-weight: 700;
-        top: 40%;
+        bottom: 17px;
         left: 2rem;
 
         @include responsive(laptop) {
@@ -155,7 +155,7 @@
     &__title {
 
         @include responsive(laptop) {
-            margin-left: 3rem;
+            margin-left: 3.1rem;
             margin-bottom: 3rem;
         }
     }

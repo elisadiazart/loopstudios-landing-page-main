@@ -46,7 +46,7 @@ Si quieres echar un vistazo al proyecto:
 
 **Elisa Diaz**
 
-- [Mi correo](elisadiazartcontact@gmail.com)
+- elisadiazartcontact@gmail.com
 - [LinkedIn](https://www.linkedin.com/in/elisa-diaz-cortes-25b308207/)
 - [Porfolio web](https://tu-dominio.com/)
 

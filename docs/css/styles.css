@@ -808,6 +808,13 @@ a {
   margin: auto;
 }
 
+@media screen and (min-width: 1024px) {
+  .footer__container {
+    margin: 0;
+    margin-right: 180px;
+  }
+}
+
 .fa-brands {
   padding: 0.5rem;
   color: white;

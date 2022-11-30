@@ -119,6 +119,10 @@
 
     &__container {
         margin: auto;
+        @include responsive(laptop) {
+            margin: 0;
+            margin-right: 180px;
+        }
     }
 }
 

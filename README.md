@@ -35,10 +35,6 @@ Si quieres echar un vistazo al proyecto:
 
 ![Captura del proyecto](https://github.com/elisadiazart/loopstudios-landing-page-main/blob/main/docs/assets/design/desktop-design.jpg?raw=true)
 
-## Estados activos
-
-![Captura del proyecto](https://github.com/elisadiazart/loopstudios-landing-page-main/blob/main/docs/assets/design/active-states.jpg?raw=true)
-
 ![Captura del proyecto](https://github.com/elisadiazart/loopstudios-landing-page-main/blob/main/docs/assets/design/IPHONE%20MOCKUP%20(1).jpg?raw=true)
 ![Captura del proyecto](https://github.com/elisadiazart/loopstudios-landing-page-main/blob/main/docs/assets/design/mobile-design.jpg?raw=true)
 

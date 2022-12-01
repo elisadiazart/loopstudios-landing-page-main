@@ -5,7 +5,7 @@
 
 ## Ejemplo en vivo
 
-- [URL-de-github-pages-de-este-proyecto](URL-de-github-pages-de-este-proyecto)
+- [Loopstudios en vivo.](https://elisadiazart.github.io/loopstudios-landing-page-main/)
 
 ## Descripción 📑
 
